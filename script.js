@@ -1,51 +1,35 @@
-// Set the date we're counting down to
+document.addEventListener("DOMContentLoaded", function () {
+    // Smooth scroll untuk nav-link
+    const navLinks = document.querySelectorAll(".nav-link");
 
-var countDownDate = new Date("April 22, 2023 00:00:00").getTime();
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
 
-// Update the count down every 1 second
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
 
-var x = setInterval(function() {
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 
-  // Get today's date and time
+    // Efek gambar muncul saat hover
+    const galleryImages = document.querySelectorAll('.gallery-img');
 
-  var now = new Date().getTime();
+    galleryImages.forEach(img => {
+        img.addEventListener('mouseenter', () => {
+            img.classList.remove('opacity-0', 'scale-95');
+            img.classList.add('opacity-100', 'scale-100');
+        });
 
-  
-
-  // Find the distance between now and the count down date
-
-  var distance = countDownDate - now;
-
-  
-
-  // Time calculations for days, hours, minutes and seconds
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  
-
-  // Display the result in the element with id="demo"
-
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-
-  + minutes + "m " + seconds + "s ";
-
-  
-
-  // If the count down is finished, write some text
-
-  if (distance < 0) {
-
-    clearInterval(x);
-
-    document.getElementById("demo").innerHTML = "Selamat Hari Raya Idul Fitri Mohon Maaf dan Batin :)";
-
-  }
-
-}, 1000);
+        img.addEventListener('mouseleave', () => {
+            img.classList.remove('opacity-100', 'scale-100');
+            img.classList.add('opacity-0', 'scale-95');
+        });
+    });
+});
