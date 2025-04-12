@@ -1,27 +1,76 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-	<title>Hitung Mundur Hari Raya Idul Fitri </title>
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
 </head>
+<body class="bg-black text-yellow-400">
 
-<body>
+  <!-- Header -->
+  <!-- Header -->
+  <div class="text-center bg-yellow-500 py-6 text-black">
+    <h1 class="text-3xl font-bold flex justify-center items-center gap-4">
+      <img src="img/ketupat.png" alt="Ketupat" class="w-8 h-8 inline-block" />
+      Selamat Hari Raya Idul Fitri 1446 H
+      <img src="img/ketupat.png" alt="Ketupat" class="w-8 h-8 inline-block" />
+    </h1>
+    <p class="mt-2">Taqabbalallahu minna wa minkum</p>
+    <p>Mohon Maaf Lahir dan Batin</p>
+  </div>
+  
 
-	<div class="container">
+  <!-- Navbar -->
+  <nav class="bg-black sticky top-0 z-50 shadow-lg border-b border-yellow-500">
+    <div class="flex justify-center space-x-8 py-4">
+      <a class="nav-link text-yellow-400 font-semibold hover:text-yellow-200 px-4 py-2 rounded-md transition" href="#home">Home</a>
+      <a class="nav-link text-yellow-400 font-semibold hover:text-yellow-200 px-4 py-2 rounded-md transition" href="#gallery">Gallery</a>
+      <a class="nav-link text-yellow-400 font-semibold hover:text-yellow-200 px-4 py-2 rounded-md transition" href="#contact">Contact</a>
+    </div>
+  </nav>
 
-		<h1>Hitung Mundur Hari Raya Idul Fitri</h1>
+  <!-- Home Section -->
+  <section id="home" class="text-center py-16 px-4">
+    <h1 class="text-4xl font-bold text-yellow-300">Selamat Hari Raya Idul Fitri</h1>
+    <p class="text-yellow-200 mt-4 max-w-4xl mx-auto">
+      Minal Aidin Wal Faizin, mohon maaf lahir dan batin.
+      Semoga setiap langkah kita penuh berkah, setiap doa terkabul, dan setiap hati kembali suci.
+      Lebaran adalah momen untuk kembali kepada fitrah — saatnya memperbaiki diri, mempererat hubungan, dan berbagi kebahagiaan.
+      Semoga Idul Fitri ini membawa kedamaian, kebahagiaan, dan kesejahteraan untuk kita semua.
+      🌙✨ Selamat Idul Fitri 1446 H ✨🌙
+    </p>
+  </section>
 
-		<p id="demo"></p>
+  <!-- Gallery Section -->
+  <section id="gallery" class="text-center py-16 bg-black">
+    <h1 class="text-4xl font-bold text-yellow-300">Gallery</h1>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 px-4">
+      <img class="gallery-img rounded-lg shadow-lg object-cover w-full h-48 opacity-0 transform scale-95 transition duration-500" src="img/1.jpg" alt="Image 1" />
+      <img class="gallery-img rounded-lg shadow-lg object-cover w-full h-48 opacity-0 transform scale-95 transition duration-500" src="img/2.jpg" alt="Image 2" />
+      <img class="gallery-img rounded-lg shadow-lg object-cover w-full h-48 opacity-0 transform scale-95 transition duration-500" src="img/3.jpg" alt="Image 3" />
+      <img class="gallery-img rounded-lg shadow-lg object-cover w-full h-48 opacity-0 transform scale-95 transition duration-500" src="img/4.jpg" alt="Image 4" />
+    </div>
+  </section>
 
-	</div>
+  <!-- Contact Section -->
+  <section id="contact" class="text-center py-16 bg-black">
+    <h1 class="text-4xl font-bold text-yellow-300 mb-6">Contact Me</h1>
+    <div class="max-w-lg mx-auto bg-gray-900 p-6 rounded-lg shadow-md space-y-4 text-left text-lg">
+      <p><i class="fas fa-envelope mr-2 text-yellow-400"></i>Email: <a href="mailto:aliffurrahman019@gmail.com" class="text-yellow-300 hover:underline">aliffurrahman019@gmail.com</a></p>
+      <p><i class="fab fa-instagram mr-2 text-yellow-400"></i>Instagram: <a href="https://instagram.com/_alifur01_" target="_blank" class="text-yellow-300 hover:underline">@_alifur01_</a></p>
+      <p><i class="fab fa-github mr-2 text-yellow-400"></i>GitHub: <a href="https://github.com/AICodeAl" target="_blank" class="text-yellow-300 hover:underline">AICodeAl</a></p>
+    </div>
+  </section>
 
-		<script src="script.js"></script>
+  <footer class="bg-black text-center text-yellow-500 py-6 border-t border-yellow-500">
+    <p>&copy; 2025 Alifur Rahman. All rights reserved.</p>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
-
 </html>
